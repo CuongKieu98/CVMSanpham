@@ -1,0 +1,12 @@
+﻿@model IEnumerable<CVMSanpham.Models.CHUDE>
+
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("Sptheochdue", "Laptopstore", new {id = item.MaCD})">
+
+
+                @item.TenChuDe
+            </a>
+        </li>
+    }

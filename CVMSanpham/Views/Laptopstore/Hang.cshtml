@@ -1,0 +1,12 @@
+﻿@model IEnumerable<CVMSanpham.Models.Hang>
+
+@foreach (var item in Model)
+{
+    <li>
+        <a href="@Url.Action("Sptheohang", "Laptopstore", new {id = item.MaHang})">
+            <img alt="@item.AnhHang" src="~/images/@item.AnhHang" />
+
+            
+        </a>
+    </li>
+}
