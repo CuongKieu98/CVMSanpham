@@ -1,0 +1,200 @@
+﻿@model IEnumerable<CVMSanpham.Models.ThongTin>
+@{
+    ViewBag.Title = "Thongtin";
+    Layout = "~/Views/Shared/_LayoutThongtin.cshtml";
+}
+
+    <!-- ABOUT SECTION START -->
+    <div class="about-section mb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-left ">
+                        <h2 class="uppercase">thông tin subas</h2>
+                        <h6 class="mb-40">Hệ thống siêu thị di động LAPTOPNEW.</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-photo p-20 bg-img-1">
+                        
+                    </div>
+                    <img src="~/img/1111.jpg" />
+                </div>
+                <div class="col-md-7">
+                    <div class="about-description mt-50">
+                    @foreach (var thongtin in Model)
+                    {
+                        <p>
+                            @thongtin.GioiThieu
+                        </p>
+                    }
+                        <p>Hơn 15 năm xây dựng và phát triển, với thời điểm hệ thống lên tới 12 cửa hàng trên toàn Hà Nội và TP.HCM, LAPTOPNEW đã và đang đem lại cho khách hàng sự trải nghiệm, hài lòng về sản phẩm và dịch vụ.</p>
+                        <p>Mọi nỗ lực của LAPTOPNEW đều mong muốn mang đến sự hài lòng của khách hàng và được đông đảo khách hàng ghi nhận. LAPTOPNEW đã được nhiều tổ chức trao tặng các giải thưởng uy tín như: lọt vào top 500 website tại việt nam, chứng nhận danh hiệu sản phẩm dịch vụ hàng đầu việt nam... Hệ thống siêu thị LAPTOPNEW mong muốn sự đóng góp ý kiện của khách hàng sẽ giúp TechOne ngày một phát triển để từ đó củng cố thêm lòng tin của khách hàng với LAPTOPNEW.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT SECTION END -->
+    <!-- TEAM SECTION START -->
+    <div class="team-section mb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-left ">
+                        <h2 class="uppercase">team member</h2>
+                        <h6 class="mb-40">There are many variations of passages of brands available,</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="active-team-member">
+                    <!-- team-member start -->
+                    <div class="col-md-12">
+                        <div class="team-member box-shadow bg-shape">
+                            <div class="team-member-photo">
+                                
+                            </div>
+                            <div class="team-member-info pt-20">
+                                <h5 class="member-name"><a href="#">Nancy holland</a></h5>
+                                <p class="member-position">Chairman</p>
+                                <p class="mb-20">There are many variations of passage of Lorem Ipsum available, but the in majority have suffered.</p>
+                                <ul class="footer-social">
+                                    <li>
+                                        <a class="facebook" href="" title="Facebook"><i class="zmdi zmdi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="google-plus" href="" title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="" title="Twitter"><i class="zmdi zmdi-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="rss" href="" title="RSS"><i class="zmdi zmdi-rss"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- team-member end -->
+                    <!-- team-member start -->
+                    <div class="col-md-12">
+                        <div class="team-member box-shadow bg-shape">
+                            <div class="team-member-photo">
+                                <img src="img/team/2.png" alt="">
+                            </div>
+                            <div class="team-member-info pt-20">
+                                <h5 class="member-name"><a href="#">Nancy holland</a></h5>
+                                <p class="member-position">Chairman</p>
+                                <p class="mb-20">There are many variations of passage of Lorem Ipsum available, but the in majority have suffered.</p>
+                                <ul class="footer-social">
+                                    <li>
+                                        <a class="facebook" href="" title="Facebook"><i class="zmdi zmdi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="google-plus" href="" title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="" title="Twitter"><i class="zmdi zmdi-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="rss" href="" title="RSS"><i class="zmdi zmdi-rss"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- team-member end -->
+                    <!-- team-member start -->
+                    <div class="col-md-12">
+                        <div class="team-member box-shadow bg-shape">
+                            <div class="team-member-photo">
+                                <img src="img/team/3.png" alt="">
+
+                            </div>
+                            <div class="team-member-info pt-20">
+                                <h5 class="member-name"><a href="#">Nancy holland</a></h5>
+                                <p class="member-position">Chairman</p>
+                                <p class="mb-20">There are many variations of passage of Lorem Ipsum available, but the in majority have suffered.</p>
+                                <ul class="footer-social">
+                                    <li>
+                                        <a class="facebook" href="" title="Facebook"><i class="zmdi zmdi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="google-plus" href="" title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="" title="Twitter"><i class="zmdi zmdi-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="rss" href="" title="RSS"><i class="zmdi zmdi-rss"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- team-member end -->
+                    <!-- team-member start -->
+                    <div class="col-md-12">
+                        <div class="team-member box-shadow bg-shape">
+                            <div class="team-member-photo">
+                                <img src="img/team/1.png" alt="">
+                            </div>
+                            <div class="team-member-info pt-20">
+                                <h5 class="member-name"><a href="#">Nancy holland</a></h5>
+                                <p class="member-position">Chairman</p>
+                                <p class="mb-20">There are many variations of passage of Lorem Ipsum available, but the in majority have suffered.</p>
+                                <ul class="footer-social">
+                                    <li>
+                                        <a class="facebook" href="" title="Facebook"><i class="zmdi zmdi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="google-plus" href="" title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="" title="Twitter"><i class="zmdi zmdi-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="rss" href="" title="RSS"><i class="zmdi zmdi-rss"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- team-member end -->
+                    <!-- team-member start -->
+                    <div class="col-md-12">
+                        <div class="team-member box-shadow bg-shape">
+                            <div class="team-member-photo">
+                                <img src="img/team/2.png" alt="">
+                            </div>
+                            <div class="team-member-info pt-20">
+                                <h5 class="member-name"><a href="#">Nancy holland</a></h5>
+                                <p class="member-position">Chairman</p>
+                                <p class="mb-20">There are many variations of passage of Lorem Ipsum available, but the in majority have suffered.</p>
+                                <ul class="footer-social">
+                                    <li>
+                                        <a class="facebook" href="" title="Facebook"><i class="zmdi zmdi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="google-plus" href="" title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="" title="Twitter"><i class="zmdi zmdi-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="rss" href="" title="RSS"><i class="zmdi zmdi-rss"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- team-member end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TEAM SECTION END -->
+

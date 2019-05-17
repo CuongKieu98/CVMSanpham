@@ -10,7 +10,7 @@
     {
         @Html.ValidationSummary(true)
         <tr style="height:40px">
-            <td> Tên đăng nhập:</td>
+            <td align="right"> Tên đăng nhập:</td>
             <td>
                 @Html.TextBox("TenDN")
                 @ViewData["Loi1"]
@@ -26,7 +26,7 @@
         <tr style="height:40px">
             <td></td>
             <td>
-                <input type="Submit" value="Đăng nhập" />
+                <button class="submit-btn-1 mt-30 btn-hover-1" type="Submit">Đăng nhập</button>
                 @Html.ActionLink("Chưa có tài khoản?", "Dangky", "User")
             </td>
 

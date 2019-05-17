@@ -208,8 +208,10 @@
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopstoreController.cs" />
+    <Compile Include="Controllers\LienheController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NguoidungController.cs" />
+    <Compile Include="Controllers\ThongtinController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -277,7 +279,24 @@
     <Content Include="images\MSIlogo.png" />
     <Content Include="images\sp\1.jpg" />
     <Content Include="images\surface-pro-3.jpg-1.jpg" />
+    <Content Include="img\1.png" />
+    <Content Include="img\1111.jpg" />
+    <Content Include="img\2.png" />
+    <Content Include="img\3.png" />
+    <Content Include="img\4.png" />
+    <Content Include="img\59615300_6137001088645_967850698102276096_n.png.jpg" />
     <Content Include="img\bg\ribbon.png" />
+    <Content Include="img\Hp-Banner-1.jpg" />
+    <Content Include="img\slider\slider-2\05.png" />
+    <Content Include="img\slider\slider-2\1.png" />
+    <Content Include="img\slider\slider-2\2.png" />
+    <Content Include="img\slider\slider-2\22.png" />
+    <Content Include="img\slider\slider-2\3.png" />
+    <Content Include="img\slider\slider-2\4.png" />
+    <Content Include="img\slider\slider-2\44.png" />
+    <Content Include="img\slider\slider-2\layer-1.png" />
+    <Content Include="img\slider\slider-2\layer-2.png" />
+    <Content Include="img\slider\slider-2\slider-1.jpg" />
     <Content Include="sanpham\assus2.png" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -364,6 +383,14 @@
     <Content Include="Views\Shared\_LayoutNguoidung.cshtml" />
     <Content Include="Views\Nguoidung\Dangky.cshtml" />
     <Content Include="Views\Nguoidung\Dangnhap.cshtml" />
+    <Content Include="Views\Shared\_LayoutDH.cshtml" />
+    <Content Include="Views\GioHang\DatHang.cshtml" />
+    <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
+    <Content Include="Views\Laptopstore\SpPartial.cshtml" />
+    <Content Include="Views\Lienhe\Lienhe.cshtml" />
+    <Content Include="Views\Thongtin\Thongtin.cshtml" />
+    <Content Include="Views\Shared\_LayoutLienhe.cshtml" />
+    <Content Include="Views\Shared\_LayoutThongtin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

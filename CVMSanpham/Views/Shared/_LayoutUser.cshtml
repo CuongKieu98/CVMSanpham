@@ -65,42 +65,7 @@
 <!-- START HEADER AREA -->
 <header class="header-area header-wrapper">
 <!-- header-top-bar -->
-<div class="header-top-bar plr-185">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 hidden-xs">
-                <div class="call-us">
-                    <p class="mb-0 roboto">(+88) 01234-567890</p>
-                </div>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-                <div class="top-link clearfix">
-                    <ul class="link f-right">
-                       
-                        <li>
-                            <a href="wishlist.html">
-                                <i class="zmdi zmdi-favorite"></i>
-                                Wish List (0)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Dangky","Nguoidung")">
-                                <i class="zmdi zmdi-account"></i>
-                                Đăng ký
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Dangnhap","Nguoidung")">
-                                <i class="zmdi zmdi-lock"></i>
-                                Đăng nhập
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@Html.Partial("_LoginPartial")
 <!-- header-middle-area -->
 <div id="sticky-header" class="header-middle-area plr-185">
 <div class="container-fluid">
@@ -169,35 +134,14 @@
             </li>
 
             <li>
-                <a href="blog.html">Blog</a>
-                <ul class="dropdwn">
-                    <li>
-                        <a href="blog-left-sidebar.html">Dropdown Repeat</a>
-                        <ul class="dropdwn-repeat">
-                            <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-
-
-
-                            <li>
-                                <a href="single-blog.html">Blog Details</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-
-                    <li>
-                        <a href="single-blog.html">Blog Details</a>
-                    </li>
-                </ul>
+                <a href="blog.html">Tin công nghệ</a>
+                
             </li>
             <li>
-                <a href="about.html">Thông tin</a>
+                <a href="@Url.Action("Thongtin","Thongtin")">Thông tin</a>
             </li>
             <li>
-                <a href="contact.html">Liên hệ</a>
+                <a href="@Url.Action("Lienhe","Lienhe")">Liên hệ</a>
             </li>
         </ul>
     </nav>
@@ -370,81 +314,176 @@
 </div>
 
 <!-- END MOBILE MENU AREA -->
-<!-- START SLIDER AREA -->
-<div class="slider-area  plr-185  mb-80">
-    <div class="container-fluid">
-        <div class="slider-content">
-            <div class="row">
-                <div class="active-slider-1 slick-arrow-1 slick-dots-1">
-                    <!-- layer-1 Start -->
-                    <div class="col-md-12">
-                        <div class="layer-1">
-                            <div class="slider-img">
-
-                                <img src="~/images/1.jpg" />
-                            </div>
-                            <div class="slider-info gray-bg">
-                                <div class="slider-info-inner">
-                                    <h1 class="slider-title-1 text-uppercase text-black-1">WaterProof smartphone</h1>
-                                    <div class="slider-brief text-black-2">
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
-                                    </div>
-                                    <a href="#" class="button extra-small button-black">
-                                        <span class="text-uppercase">Buy now</span>
-                                    </a>
-                                </div>
-                            </div>
+    <!-- START SLIDER AREA -->
+    <div class="slider-area slider-2">
+        <div class="bend niceties preview-2">
+            <div id="nivoslider-2" class="slides">
+                <img src="~/img/slider/slider-2/slider-1.jpg" alt="" title="#slider-direction-1" />
+                <img src="~/img/slider/slider-2/slider-1.jpg" alt="" title="#slider-direction-2" />
+                <img src="~/img/slider/slider-2/slider-1.jpg" alt="" title="#slider-direction-3" />
+                <img src="~/img/slider/slider-2/slider-1.jpg" alt="" title="#slider-direction-4" />
+                <img src="~/img/slider/slider-2/slider-1.jpg" alt="" title="#slider-direction-5" />
+            </div>
+            <!-- ===== direction 1 ===== -->
+            <div id="slider-direction-1" class="slider-direction">
+                <div class="slider-content-1">
+                    <div class="title-container">
+                        <div class="wow rotateInDownLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <h6 class="slider2-title-1">Best price : $866</h6>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <h1 class="slider2-title-2">new laptop</h1>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <h2 class="slider2-title-3">Asus Zenbook s12</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                            <p class="slider2-title-4">There are many variations of passages of Lorem Ipsum availables, but the majority have suffered alteration in some form.</p>
+                        </div>
+                        <div class="slider-button wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s">
+                            <a href="#" class="button extra-small button-black">
+                                <span class="text-uppercase">chi tiết</span>
+                            </a>
                         </div>
                     </div>
-                    <!-- layer-1 end -->
-                    <!-- layer-1 Start -->
-                    <div class="col-md-12">
-                        <div class="layer-1">
-                            <div class="slider-img">
-
-                                <img src="~/images/2.jpg" />
-                            </div>
-                            <div class="slider-info gray-bg">
-                                <div class="slider-info-inner">
-                                    <h1 class="slider-title-1 text-uppercase text-black-1">WaterProof smartphone</h1>
-                                    <div class="slider-brief text-black-2">
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
-                                    </div>
-                                    <a href="#" class="button extra-small button-black">
-                                        <span class="text-uppercase">Buy now</span>
-                                    </a>
-                                </div>
-                            </div>
+                </div>
+                <!-- layer 1 -->
+                <div class="slider-content-1-image">
+                    <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="layer-1-1">
+                            <img src="~/img/slider/slider-2/1.png" alt="" />
                         </div>
                     </div>
-                    <!-- layer-1 end -->
-                    <!-- layer-1 Start -->
-                    <div class="col-md-12">
-                        <div class="layer-1">
-                            <div class="slider-img">
-
-                                <img src="~/images/1.jpg" />
-                            </div>
-                            <div class="slider-info gray-bg">
-                                <div class="slider-info-inner">
-                                    <h1 class="slider-title-1 text-uppercase text-black-1">WaterProof smartphone</h1>
-                                    <div class="slider-brief text-black-2">
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
-                                    </div>
-                                    <a href="#" class="button extra-small button-black">
-                                        <span class="text-uppercase">Buy now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- layer-1 end -->
                 </div>
             </div>
+            <!-- ===== direction 2 ===== -->
+            <div id="slider-direction-2" class="slider-direction">
+                <div class="slider-content-2">
+                    <div class="title-container">
+                        <div class="wow rotateInDownLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <h6 class="slider2-title-1">Best price : $866</h6>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <h1 class="slider2-title-2">new laptop</h1>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <h2 class="slider2-title-3">Acer Pro s123</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                            <p class="slider2-title-4">There are many variations of passages of Lorem Ipsum availables, but the majority have suffered alteration in some form.</p>
+                        </div>
+                        <div class="slider-button wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s">
+                            <a href="#" class="button extra-small button-black">
+                                <span class="text-uppercase">Buy now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- layer 1 -->
+                <div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="layer-1-1 layer-2-1">
+                        <img src="~/img/slider/slider-2/2.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <!-- ===== direction 3 ===== -->
+            <div id="slider-direction-3" class="slider-direction">
+                <div class="slider-content-1">
+                    <div class="title-container">
+                        <div class="wow rotateInDownLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <h6 class="slider2-title-1">Best price : $866</h6>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <h1 class="slider2-title-2">new smart phone</h1>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <h2 class="slider2-title-3">Samsung grand 6</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                            <p class="slider2-title-4">There are many variations of passages of Lorem Ipsum availables, but the majority have suffered alteration in some form.</p>
+                        </div>
+                        <div class="slider-button wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s">
+                            <a href="#" class="button extra-small button-black">
+                                <span class="text-uppercase">Buy now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- layer 1 -->
+                <div class="slider-content-1-image">
+                    <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="layer-1-1">
+                            <img src="~/img/slider/slider-2/22.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== direction 4 ===== -->
+            <div id="slider-direction-4" class="slider-direction">
+                <div class="slider-content-2">
+                    <div class="title-container">
+                        <div class="wow rotateInDownLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <h6 class="slider2-title-1">Best price : $866</h6>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <h1 class="slider2-title-2">new smart phone</h1>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <h2 class="slider2-title-3">Samsung grand 6</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                            <p class="slider2-title-4">There are many variations of passages of Lorem Ipsum availables, but the majority have suffered alteration in some form.</p>
+                        </div>
+                        <div class="slider-button wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s">
+                            <a href="#" class="button extra-small button-black">
+                                <span class="text-uppercase">Buy now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- layer 1 -->
+                <div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="layer-1-1 layer-2-1">
+                        <img src="~/img/slider/slider-2/4.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <!-- ===== direction 5 ===== -->
+            <div id="slider-direction-5" class="slider-direction">
+                <div class="slider-content-1">
+                    <div class="title-container">
+                        <div class="wow rotateInDownLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <h6 class="slider2-title-1">Best price : $866</h6>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <h1 class="slider2-title-2">new smart phone</h1>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <h2 class="slider2-title-3">Samsung grand 6</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                            <p class="slider2-title-4">There are many variations of passages of Lorem Ipsum availables, but the majority have suffered alteration in some form.</p>
+                        </div>
+                        <div class="slider-button wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s">
+                            <a href="#" class="button extra-small button-black">
+                                <span class="text-uppercase">Buy now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- layer 1 -->
+                <div class="slider-content-1-image">
+                    <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="layer-1-1">
+                            <img src="~/img/slider/slider-2/44.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ==== -->
         </div>
     </div>
-</div>
-<!-- END SLIDER AREA -->
+    <!-- END SLIDER AREA -->
 
 <!-- Start page content -->
 <section id="page-content" class="page-wrapper">
@@ -454,7 +493,7 @@
     <!-- BREADCRUMBS SETCTION END -->
     <!-- Start page content -->
     <section id="page-content" class="page-wrapper">
-        <!-- UP COMMING PRODUCT SECTION START -->
+        <!-- UP COMMING PRODUCT SECTION START --> 
         <div class="up-comming-product-section mb-80">
             <div class="container">
                 <div class="row">
@@ -463,13 +502,13 @@
                         <div class="up-comming-pro gray-bg clearfix">
                             <div class="up-comming-pro-img f-left">
                                 <a href="#">
-
-                                    <img src="~/images/surface-pro-3.jpg-1.jpg" />
+                                    <img src="~/img/59615300_6137001088645_967850698102276096_n.png.jpg" />
+                                  
                                 </a>
                             </div>
                             <div class="up-comming-pro-info f-left">
-                                <h3><a href="#">Dummy Product Name</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitest, sed do eiusmod tempor incididunt ut labore et dolores top magna aliqua. Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea commodo consequat. laborum. </p>
+                                <h3><a href="#">Sự kiện hot mỗi tháng</a></h3>
+                                <p>Hãy tham gia mua sắm vào những đợt khuyến mãi hàng tháng của cửa hàng trong thời gian sự kiện</p>
                                 <div class="up-comming-time">
                                     <div data-countdown="2019/06/15"></div>
                                 </div>
@@ -484,7 +523,7 @@
                             <div class="banner-img">
                                 <a href="#">
 
-                                    <img src="~/images/hp-15-da0054tu-4me68pa-thumbnail-400x400.jpg" />
+                                    <img src="~/img/slider/slider-2/05.png" />
                                 </a>
                             </div>
                             <div class="banner-info">
@@ -569,8 +608,8 @@
 </div>
 </div>
 </div>
-<!-- PRODUCT TAB SECTION END -->
-    <!-- START QUICKVIEW PRODUCT -->
+<div id="quickview-wrapper">
+<!-- Modal -->
     <div id="quickview-wrapper">
         <!-- Modal -->
         <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
@@ -647,129 +686,128 @@
         </div>
         <!-- END Modal -->
     </div>
-    <!-- END QUICKVIEW PRODUCT -->
 <!-- BLOG SECTION START -->
-<div class="blog-section mb-50">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title text-left mb-40">
-                    <h2 class="uppercase">Tin công nghệ</h2>
-                    <h6>Những thông tin công nghệ nổi bật có trong tuần:</h6>
+    <div class="blog-section mb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-left mb-40">
+                        <h2 class="uppercase">Tin công nghệ</h2>
+                        <h6>Những thông tin công nghệ nổi bật có trong tuần:</h6>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="blog">
-            <div class="row active-blog">
-                <!-- blog-item start -->
-                <div class="col-xs-12">
-                    <div class="blog-item">
+            <div class="blog">
+                <div class="row active-blog">
+                    <!-- blog-item start -->
+                    <div class="col-xs-12">
+                        <div class="blog-item">
 
-                        <img src="~/images/22/1.jpg" />
-                        <div class="blog-desc">
-                            <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
-                            <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
-                            <div class="read-more">
-                                <a href="single-blog.html">Read more</a>
+                            <img src="~/images/22/1.jpg" />
+                            <div class="blog-desc">
+                                <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
+                                <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
+                                <div class="read-more">
+                                    <a href="single-blog.html">Read more</a>
+                                </div>
+                                <ul class="blog-meta">
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <!-- blog-item end -->
-                <!-- blog-item start -->
-                <div class="col-xs-12">
-                    <div class="blog-item">
+                    <!-- blog-item end -->
+                    <!-- blog-item start -->
+                    <div class="col-xs-12">
+                        <div class="blog-item">
 
-                        <img src="~/images/22/1.jpg" />
-                        <div class="blog-desc">
-                            <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
-                            <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
-                            <div class="read-more">
-                                <a href="single-blog.html">Read more</a>
+                            <img src="~/images/22/1.jpg" />
+                            <div class="blog-desc">
+                                <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
+                                <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
+                                <div class="read-more">
+                                    <a href="single-blog.html">Read more</a>
+                                </div>
+                                <ul class="blog-meta">
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <!-- blog-item end -->
-                <!-- blog-item start -->
-                <div class="col-xs-12">
-                    <div class="blog-item">
+                    <!-- blog-item end -->
+                    <!-- blog-item start -->
+                    <div class="col-xs-12">
+                        <div class="blog-item">
 
-                        <img src="~/images/22/1.jpg" />
-                        <div class="blog-desc">
-                            <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
-                            <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
-                            <div class="read-more">
-                                <a href="single-blog.html">Read more</a>
+                            <img src="~/images/22/1.jpg" />
+                            <div class="blog-desc">
+                                <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
+                                <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
+                                <div class="read-more">
+                                    <a href="single-blog.html">Read more</a>
+                                </div>
+                                <ul class="blog-meta">
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <!-- blog-item end -->
-                <!-- blog-item start -->
-                <div class="col-xs-12">
-                    <div class="blog-item">
+                    <!-- blog-item end -->
+                    <!-- blog-item start -->
+                    <div class="col-xs-12">
+                        <div class="blog-item">
 
-                        <img src="~/images/22/3.jpg" />
-                        <div class="blog-desc">
-                            <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
-                            <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
-                            <div class="read-more">
-                                <a href="single-blog.html">Read more</a>
+                            <img src="~/images/22/3.jpg" />
+                            <div class="blog-desc">
+                                <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
+                                <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
+                                <div class="read-more">
+                                    <a href="single-blog.html">Read more</a>
+                                </div>
+                                <ul class="blog-meta">
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="blog-meta">
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
+                    <!-- blog-item end -->
                 </div>
-                <!-- blog-item end -->
             </div>
         </div>
     </div>
-</div>
-<!-- BLOG SECTION END -->
+    <!-- BLOG SECTION END -->
 </section>
 
 <!-- START FOOTER AREA -->

@@ -65,42 +65,7 @@
         <!-- START HEADER AREA -->
         <header class="header-area header-wrapper">
             <!-- header-top-bar -->
-            <div class="header-top-bar plr-185">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6 hidden-xs">
-                            <div class="call-us">
-                                <p class="mb-0 roboto">(+88) 01234-567890</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="top-link clearfix">
-                                <ul class="link f-right">
-
-                                    <li>
-                                        <a href="wishlist.html">
-                                            <i class="zmdi zmdi-favorite"></i>
-                                            Wish List (0)
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="@Url.Action("Dangky","Nguoidung")">
-                                            <i class="zmdi zmdi-account"></i>
-                                            Đăng ký
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="@Url.Action("Dangnhap","Nguoidung")">
-                                            <i class="zmdi zmdi-lock"></i>
-                                            Đăng nhập
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @Html.Partial("_LoginPartial")
             <!-- header-middle-area -->
             <div id="sticky-header" class="header-middle-area plr-185">
                 <div class="container-fluid">
@@ -194,10 +159,10 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="about.html">Thông tin</a>
+                                            <a href="@Url.Action("Thongtin","Thongtin")">Thông tin</a>
                                         </li>
                                         <li>
-                                            <a href="contact.html">Liên hệ</a>
+                                            <a href="@Url.Action("Lienhe","Lienhe")">Liên hệ</a>
                                         </li>
                                     </ul>
                                 </nav>

@@ -10,28 +10,28 @@
     {
         @Html.ValidationSummary(true)
         <tr style="height:40px">
-            <td> Họ tên khách hàng:</td>
+            <td align="right"> Họ tên khách hàng:</td>
             <td>
                 @Html.TextBox("HotenKH")
                 @ViewData["Loi1"]
             </td>
         </tr>
         <tr style="height:40px">
-            <td> Tên đăng nhập:</td>
+            <td align="right"> Tên đăng nhập:</td>
             <td>
                 @Html.TextBox("TenDN")
                 @ViewData["Loi2"]
             </td>
         </tr>
         <tr style="height:40px">
-            <td>  Mật khẩu:</td>
+            <td align="right">  Mật khẩu:</td>
             <td>
                 @Html.Password("Matkhau")
                 @ViewData["Loi3"]
             </td>
         </tr>
             <tr style="height:40px">
-                <td>Mật khẩu nhậtr lại: </td>
+                <td align="right">Mật khẩu nhậtr lại: </td>
                 <td>
                     @Html.Password("Matkhaunhatrlai")
                     @ViewData["Loi4"]
@@ -40,36 +40,31 @@
 
 
             <tr style="height:40px">
-                <td> Email:</td>
+                <td align="right"> Email:</td>
                 <td>
                     @Html.TextBox("Email")
                     @ViewData["Loi5"]
                 </td>
             </tr>
             <tr style="height:40px">
-                <td> Địa chỉ:</td>
+                <td align="right"> Địa chỉ:</td>
                 <td>
                     @Html.TextBox("Diachi")
                     @ViewData["Loi7"]
                 </td>
             </tr>
             <tr style="height:40px">
-                <td>Điện thoại:</td>
+                <td align="right">Điện thoại:</td>
                 <td>
                     @Html.TextBox("Dienthoai")
                     @ViewData["Loi6"]
                 </td>
             </tr>
-            <tr style="height:40px">
-                <td> Ngày sinh :</td>
-                <td>
-                    <input type="date" name="Ngaysinh" />
-                </td>
-            </tr>
+            
             <tr style="height:40px">
                 <td></td>
                 <td>
-                    <input type="Submit" value="Đăng ký" />
+                    <button class="submit-btn-1 mt-30 btn-hover-1" type="Submit">Đăng ký</button>
                 </td>
             </tr>
     }

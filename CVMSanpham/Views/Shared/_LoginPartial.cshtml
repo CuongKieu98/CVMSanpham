@@ -1,22 +1,81 @@
-﻿@using Microsoft.AspNet.Identity
-@if (Request.IsAuthenticated)
+﻿@if (Session["Taikhoan"] != null)
 {
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-    {
-    @Html.AntiForgeryToken()
-
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-    </ul>
-    }
+    
+       
+        <!-- header-top-bar -->
+        <div class="header-top-bar plr-185">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 hidden-xs">
+                        <div class="call-us">
+                            <p class="mb-0 roboto">(+88) 01234-567890</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="top-link clearfix">
+                            <ul class="link f-right">
+                       
+                              
+                                <li>
+                                    
+                                    <i class="zmdi zmdi-account"></i>
+                                   Xin chào @Session["Tentaikhoan"]
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="@Url.Action("Dangxuat","Nguoidung")">
+                                        <i class="zmdi zmdi-lock"></i>
+                                        Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-middle-area -->
+    
 }
 else
-{
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+        {
+      
+        <!-- header-top-bar -->
+            <div class="header-top-bar plr-185">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 hidden-xs">
+                            <div class="call-us">
+                                <p class="mb-0 roboto">(+88) 01234-567890</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="top-link clearfix">
+                                <ul class="link f-right">
+                       
+                                    <li>
+                                        <a href="wishlist.html">
+                                            <i class="zmdi zmdi-favorite"></i>
+                                            Wish List (0)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Dangky","Nguoidung")">
+                                            <i class="zmdi zmdi-account"></i>
+                                            Đăng ký
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Dangnhap","Nguoidung")">
+                                            <i class="zmdi zmdi-lock"></i>
+                                            Đăng nhập
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 }

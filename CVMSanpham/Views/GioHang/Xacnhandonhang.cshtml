@@ -1,0 +1,87 @@
+﻿@using CVMSanpham.Models
+@{
+    ViewBag.Title = "Xacnhandonhang";
+    Layout = "~/Views/Shared/_LayoutDH.cshtml";
+}
+<!-- BREADCRUMBS SETCTION START -->
+<div class="breadcrumbs-section plr-200 mb-80">
+    <div class="breadcrumbs overlay-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs-inner">
+                        <h1 class="breadcrumbs-title">Xác nhận đơn hàng</h1>
+                        <ul class="breadcrumb-list">
+                            <li><a href="@Url.Action("Index","Laptopstore")">Trang chủ</a></li>
+                            <li>Xác nhận đơn hàng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMBS SETCTION END -->
+<!-- order-complete start -->
+<div class="tab-pane" id="order-complete">
+    <div class="order-complete-content box-shadow">
+        <div class="thank-you p-30 text-center">
+            <h6 class="text-black-5 mb-0">Cám ơn! Đơn hàng của bạn đã được ghi nhận.</h6>
+        </div>
+        <div class="order-info p-30 mb-10">
+            <ul class="order-info-list">
+                <li>
+                    <h6>order no</h6>
+                    <p>m 2653257</p>
+                </li>
+                <li>
+                    <h6>order no</h6>
+                    <p>m 2653257</p>
+                </li>
+                <li>
+                    <h6>order no</h6>
+                    <p>m 2653257</p>
+                </li>
+                <li>
+                    <h6>order no</h6>
+                    <p>m 2653257</p>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <!-- our order -->
+            
+            <div class="thank-you p-30 text-center">
+                <div class="bill-details p-30">
+                    <h6 class="widget-title border-left mb-20">Địa chỉ giao hàng</h6>
+                    @{
+                        KhachHang kh = (KhachHang)Session["Taikhoan"];
+                    }
+                    @using (Html.BeginForm())
+                    {
+                        <ul class="bill-address">
+                            <li>
+                                <span>Họ tên:</span>
+                                <h2>@kh.HoTen</h2>
+                            </li>
+                            <li>
+                                <span>Địa chỉ</span>
+                                @kh.DiaChi
+                            </li>
+                            <li>
+                                <span>email:</span>
+                                @kh.Email
+                            </li>
+                            <li>
+                                <span>phone : </span>
+                                @kh.DienThoai
+                            </li>
+                        </ul>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- order-complete end -->

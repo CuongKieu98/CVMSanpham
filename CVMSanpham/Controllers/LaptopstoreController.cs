@@ -62,5 +62,15 @@ namespace CVMSanpham.Controllers
                 select s;
             return View(Sanpham.Single());
         }
+
+        public ActionResult SpPartial (int id)
+        {
+            var Sanpham = from s in data.SanPhams
+                where s.MaSP == id
+                select s;
+            return View(Sanpham.Single());
+
+        }
+        
     }
 }

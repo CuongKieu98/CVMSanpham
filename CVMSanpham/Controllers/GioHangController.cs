@@ -83,6 +83,7 @@ namespace CVMSanpham.Controllers
         //Tao Partial view de hien thi thong tin gio hang
         public ActionResult GiohangPartial()
         {
+           
             ViewBag.Tongsoluong = TongSoLuong();
             ViewBag.Tongtien = TongTien();
             List<Giohang> lstGiohang = Session["GioHang"] as List<Giohang>;
@@ -135,7 +136,7 @@ namespace CVMSanpham.Controllers
             //Kiem tra dang nhap
             if (Session["Taikhoan"] == null || Session["Taikhoan"].ToString() == "")
             {
-                return RedirectToAction("Dangnhap", "User");
+                return RedirectToAction("Dangnhap", "Nguoidung");
             }
             if (Session["Giohang"] == null)
             {

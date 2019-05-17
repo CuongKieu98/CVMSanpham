@@ -1,0 +1,145 @@
+﻿@using CVMSanpham.Models
+@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/_LayoutDH.cshtml";
+}
+
+<!-- checkout start -->
+<!-- BREADCRUMBS SETCTION START -->
+<div class="breadcrumbs-section plr-200 mb-80">
+    <div class="breadcrumbs overlay-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs-inner">
+                        <h1 class="breadcrumbs-title">Đơn Hàng</h1>
+                        <ul class="breadcrumb-list">
+                            <li><a href="@Url.Action("Index","Laptopstore")">Trang chủ</a></li>
+                            <li>Đơn hàng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMBS SETCTION END -->
+<div class="tab-pane active" id="checkout">
+    <div class="checkout-content box-shadow p-30">
+        <form action="#">
+            <div class="row">
+                <!-- billing details -->
+                <div class="col-md-6">
+                    <div class="billing-details pr-10">
+                        <h6 class="widget-title border-left mb-20">billing details</h6>
+                        <input type="text" placeholder="Your Name Here...">
+                        <input type="text" placeholder="Email address here...">
+                        <input type="text" placeholder="Phone here...">
+                        <input type="text" placeholder="Company neme here...">
+                        <select class="custom-select">
+                            <option value="defalt">country</option>
+                            <option value="c-1">Australia</option>
+                            <option value="c-2">Bangladesh</option>
+                            <option value="c-3">Unitd States</option>
+                            <option value="c-4">Unitd Kingdom</option>
+                        </select>
+                        <select class="custom-select">
+                            <option value="defalt">State</option>
+                            <option value="c-1">Melbourne</option>
+                            <option value="c-2">Dhaka</option>
+                            <option value="c-3">New York</option>
+                            <option value="c-4">London</option>
+                        </select>
+                        <select class="custom-select">
+                            <option value="defalt">Town/City</option>
+                            <option value="c-1">Victoria</option>
+                            <option value="c-2">Chittagong</option>
+                            <option value="c-3">Boston</option>
+                            <option value="c-4">Cambridge</option>
+                        </select>
+                        <textarea class="custom-textarea" placeholder="Your address here..."></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- our order -->
+                
+                    <div class="payment-details pl-10 mb-50">
+                        <h6 class="widget-title border-left mb-20">Đơn hàng của bạn</h6>
+                        <table>
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    <td class="td-title-1">@item.sTenSP</td>
+                                    <td class="td-title-2">@String.Format("{0:0,0}", item.dThanhtien) VNĐ</td>
+                             
+                                </tr>
+
+                           
+                           
+                            }
+                        </table>
+                    
+                
+                        <table>
+                      
+                            <tr>
+                                <td class="order-total">Tổng tiền thanh toán</td>
+                                <td class="order-total-price">@String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- payment-method -->
+                    <div class="payment-method">
+                        <h6 class="widget-title border-left mb-20">Hình thức thanh toán</h6>
+                        <div id="accordion">
+                            <div class="panel">
+                                <h4 class="payment-title box-shadow">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#bank-transfer">
+                                        Giao hàng nhanh
+                                    </a>
+                                </h4>
+                                <div id="bank-transfer" class="panel-collapse collapse in">
+                                    <div class="payment-content">
+                                        <p>Thời gian giao hàng khoảng 1-2 ngày trong nội thành, 3-4 ngày ở các tỉnh lẻ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel">
+                                <h4 class="payment-title box-shadow">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                        Thanh toán trực tuyến
+                                    </a>
+                                </h4>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="payment-content">
+                                        <p>Với thanh toán trực tuyến, bạn có thể thanh toán tiền trước và nhận hàng sau đó</p>
+                                        <ul class="payent-type mt-10">
+                                            <li><a href="#"><img src="~/img/1.png" alt=""></a></li>
+                                            <li><a href="#"><img src="~/img/2.png" alt=""></a></li>
+                                            <li><a href="#"><img src="~/img/3.png" alt=""></a></li>
+                                            <li><a href="#"><img src="~/img/4.png" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="thank-you p-30 text-center">
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+    <!-- payment-method end -->
+    <button class="submit-btn-1 mt-30 btn-hover-1" type="Submit">đặt hàng</button>            
+    
+}
+<!-- checkout end -->
+</div>
