@@ -205,6 +205,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopstoreController.cs" />
@@ -242,6 +243,18 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\core.css" />
+    <Content Include="Content\cssadmin\all.min.css" />
+    <Content Include="Content\cssadmin\bootstrap.bundle.min.js" />
+    <Content Include="Content\cssadmin\chart-area-demo.js" />
+    <Content Include="Content\cssadmin\Chart.min.js" />
+    <Content Include="Content\cssadmin\datatables-demo.js" />
+    <Content Include="Content\cssadmin\dataTables.bootstrap4.css" />
+    <Content Include="Content\cssadmin\dataTables.bootstrap4.js" />
+    <Content Include="Content\cssadmin\jquery.dataTables.js" />
+    <Content Include="Content\cssadmin\jquery.easing.min.js" />
+    <Content Include="Content\cssadmin\jquery.min.js" />
+    <Content Include="Content\cssadmin\sb-admin.css" />
+    <Content Include="Content\cssadmin\sb-admin.min.js" />
     <Content Include="Content\custom.css" />
     <Content Include="Content\material-design-iconic-font.css" />
     <Content Include="Content\modernizr-2.8.3.min.js" />
@@ -252,6 +265,9 @@
     <Content Include="Content\style-customizer.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Content\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\webfonts\fa-solid-900.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -298,6 +314,8 @@
     <Content Include="img\slider\slider-2\layer-2.png" />
     <Content Include="img\slider\slider-2\slider-1.jpg" />
     <Content Include="sanpham\assus2.png" />
+    <Content Include="sanpham\ASUS.png" />
+    <Content Include="Scripts\admin2.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\ajax-mail.js" />
@@ -314,6 +332,18 @@
       <LastGenOutput>dbQLstore.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\webfonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -391,6 +421,22 @@
     <Content Include="Views\Thongtin\Thongtin.cshtml" />
     <Content Include="Views\Shared\_LayoutLienhe.cshtml" />
     <Content Include="Views\Shared\_LayoutThongtin.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Laptop.cshtml" />
+    <Content Include="Views\Admin\hangsanxuat.cshtml" />
+    <Content Include="Views\Admin\chudesp.cshtml" />
+    <Content Include="Views\Admin\ChitietSanpham.cshtml" />
+    <Content Include="Views\Admin\Xoasanpham.cshtml" />
+    <Content Include="Views\Admin\Suasanpham.cshtml" />
+    <Content Include="Views\Admin\Themmoihang.cshtml" />
+    <Content Include="Views\Admin\Suahang.cshtml" />
+    <Content Include="Views\Admin\Xoahang.cshtml" />
+    <Content Include="Views\Admin\Themmoicdsp.cshtml" />
+    <Content Include="Views\Admin\SuaCD.cshtml" />
+    <Content Include="Views\Admin\XoaCD.cshtml" />
+    <Content Include="Views\Admin\ThemmoiSanpham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

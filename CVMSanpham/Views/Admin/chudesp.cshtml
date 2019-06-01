@@ -1,0 +1,34 @@
+﻿@model IEnumerable<CVMSanpham.Models.CHUDE>
+
+@{
+    ViewBag.Title = "chudesp";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Loại sản phẩm</h2>
+
+<p>
+    <h1><a href="@Url.Action("Themmoicdsp", "Admin")"><i class="fas fa-folder-plus"></i></i></a> </h1>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenChuDe)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenChuDe)
+        </td>
+        <td>
+            <a href="@Url.Action("SuaCD", "Admin",new { id=item.MaCD })"><i class="fas fa-edit"></i></a>----
+
+            <a href="@Url.Action("XoaCD", "Admin",new { id=item.MaCD })"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

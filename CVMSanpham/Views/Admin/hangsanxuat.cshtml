@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CVMSanpham.Models.Hang>
+
+@{
+    ViewBag.Title = "hangsanxuat";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Quản lý Hãng Sản Xuất</h2>
+
+<p>
+    <h1><a href="@Url.Action("Themmoihang", "Admin")"><i class="fas fa-folder-plus"></i></i></a> </h1>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnhHang)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnHang)
+        </td>
+        <td>
+            <img src="@Url.Content("~/images/"+ item.AnhHang)"  />
+        </td>
+
+        <td>
+            <a href="@Url.Action("Suahang", "Admin",new { id=item.MaHang })"><i class="fas fa-edit"></i></a> ---
+          
+            <a href="@Url.Action("Xoahang", "Admin",new { id=item.MaHang })"><i class="fas fa-trash-alt"></i></a>
+         
+            
+        </td>
+    </tr>
+}
+
+</table>

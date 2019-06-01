@@ -74,7 +74,7 @@ namespace CVMSanpham.Controllers
                 kh.DiaChi = diachi;
                 kh.DienThoai = dienthoai;
                 // kh.Ngaysinh = DateTime.Parse(ngaysinh);
-                kh.NgaySinh = DateTime.Parse(ngaysinh);
+               
                 db.KhachHangs.InsertOnSubmit(kh);
                 db.SubmitChanges();
                 return RedirectToAction("Dangnhap");

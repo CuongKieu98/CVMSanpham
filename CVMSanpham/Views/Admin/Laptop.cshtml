@@ -1,0 +1,114 @@
+﻿@using CVMSanpham.Models
+@using PagedList.Mvc
+@model PagedList.PagedList<CVMSanpham.Models.SanPham>
+@helper Truncate(string input, int length)
+{
+if (input.Length < length)
+{
+        @input
+}
+else
+{
+        @input.Substring(0, length)<text>...</text>
+}
+}
+
+@{
+    ViewBag.Title = "Laptop";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">Trang chủ</a>
+    </li>
+    <li class="breadcrumb-item active">Sản phẩm</li>
+</ol>
+
+<p>
+    <div class="tooltip-top">
+        <h1><a href="@Url.Action("ThemmoiSanpham", "Admin")"><i class="fas fa-folder-plus"></i></a> </h1>
+        
+    </div>
+</p>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Danh sách mặt hàng
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th style="text-align: center"> Sản phẩm</th>
+                        <th>Ảnh bìa</th>
+                        <th>Giá KM</th>
+                        <th>Giá gốc</th>
+                        <th style="text-align: center"> Chi tiết</th>
+                        <th>Ngày cập nhật</th>
+                        <th>Loại</th>
+                        <th>Hãng</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Ảnh bìa</th>
+                        <th>Giá KM</th>
+                        <th>Giá gốc</th>
+                        <th>Mô tả:</th>
+                        <th>Ngày cập nhật</th>
+                        <th>Loại</th>
+                        <th>Hãng</th>
+
+                    </tr>
+                </tfoot>
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenSP)
+                            </td>
+                            <td>
+                                <img src="@Url.Content("~/sanpham/"+ item.Anhbia)" width="100" />
+                            </td>
+                            <td>
+
+                                <a style="color: red">@Html.DisplayFor(modelItem => item.GiaHienTai)</a>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GiaCu)
+                            </td>
+                            <td>
+                                @Truncate(item.MoTa, 100)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NgayCapNhat)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CHUDE.TenChuDe)
+                            </td>
+                            <td>
+                                <img src="@Url.Content("~/images/"+ item.Hang.AnhHang)" />
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Suasanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-edit"></i></a>
+                                <a href="@Url.Action("ChitietSanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-info-circle"></i></a>
+                                <a href="@Url.Action("Xoasanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+
+                        </tr>
+
+
+
+                    </tbody>
+                }
+
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+
