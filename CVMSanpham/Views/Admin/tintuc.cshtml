@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CVMSanpham.Models.TinTuc>
+
+@{
+    ViewBag.Title = "tintuc";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>tintuc</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TieuDe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TomTat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anhtintuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LuotXem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayCapNhat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnHien)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TieuDe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TomTat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anhtintuc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoiDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LuotXem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnHien)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaTin }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaTin }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaTin })
+        </td>
+    </tr>
+}
+
+</table>

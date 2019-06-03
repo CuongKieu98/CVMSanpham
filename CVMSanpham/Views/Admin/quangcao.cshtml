@@ -1,0 +1,76 @@
+﻿@model IEnumerable<CVMSanpham.Models.QuangCao>
+
+@{
+    ViewBag.Title = "quangcao";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>quangcao</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenQC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenCty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnhQC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vitri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaybatdau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngayhethan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnHien)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenQC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenCty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnhQC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinkUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vitri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngaybatdau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngayhethan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnHien)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaQC }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaQC }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaQC })
+        </td>
+    </tr>
+}
+
+</table>

@@ -55,6 +55,12 @@ namespace CVMSanpham.Controllers
             return View(Sanpham);
         }
 
+        public ActionResult Slider()
+        {
+            var Slider = from sl in data.Sliders select sl;
+            return PartialView(Slider);
+        }
+
         public ActionResult Details(int id)
         {
             var Sanpham = from s in data.SanPhams

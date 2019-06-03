@@ -46,6 +46,33 @@ namespace CVMSanpham.Controllers
             }*/
             return View(db.CHUDEs.ToList());
         }
+
+        public ActionResult thongtin()
+        {
+            /*
+            if (Session["Taikhoanadmin"] == null || Session["Taikhoanadmin"].ToString() == "")
+            {
+                return RedirectToAction("Login", "Admin");
+            }*/
+            return View(db.ThongTins.ToList());
+
+        }
+
+        public ActionResult quangcao()
+        {
+            return View(db.QuangCaos.ToList());
+        }
+
+        public ActionResult slide()
+        {
+            return View(db.Sliders.ToList());
+        }
+
+        public ActionResult tintuc()
+        {
+            return View(db.TinTucs.ToList());
+        }
+       
         [HttpGet]
        
         public ActionResult Login()
@@ -411,5 +438,81 @@ namespace CVMSanpham.Controllers
                 return RedirectToAction("Laptop");
             }
         }
+        [HttpGet]
+        public ActionResult ThemmoiSlide()
+        {
+            
+      
+            return View();
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult ThemmoiSlide(Slider slider, HttpPostedFileBase fileUpload)
+        {
+            //Dua du lieu vao dropdownload
+            
+            //Kiem tra duong dan file
+            if (fileUpload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn ảnh bìa";
+                return View();
+            }
+            //Them vao CSDL
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    //Luu ten fie, luu y bo sung thu vien using System.IO;
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    //Luu duong dan cua file
+                    var path = Path.Combine(Server.MapPath("~/Images"), fileName);
+                    //Kiem tra hình anh ton tai chua?
+                    if (System.IO.File.Exists(path))
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                    else
+                    {
+                        //Luu hinh anh vao duong dan
+                        fileUpload.SaveAs(path);
+                    }
+
+                    slider.UrlHinh = fileName;
+                    //Luu vao CSDL
+                    db.Sliders.InsertOnSubmit(slider);
+                    db.SubmitChanges();
+                }
+                return RedirectToAction("slide");
+            }
+        }
+        //Xóa silde
+        [HttpGet]
+        public ActionResult Xoaslide(int id)
+        {
+            //Lay ra doi tuong sach can xoa theo ma
+            Slider slider = db.Sliders.SingleOrDefault(n => n.MaSlider == id);
+            ViewBag.MaSlider = slider.MaSlider;
+            if (slider == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(slider);
+        }
+
+        [HttpPost, ActionName("Xoaslide")]
+        public ActionResult Xoaslider(int id)
+        {
+
+            Slider slider = db.Sliders.SingleOrDefault(n => n.MaSlider == id);
+            ViewBag.MaSlider = slider.MaSlider;
+            if (slider == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            db.Sliders.DeleteOnSubmit(slider);
+            db.SubmitChanges();
+            return RedirectToAction("slide");
+        }
+
     }
 }

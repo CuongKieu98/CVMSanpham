@@ -1,0 +1,96 @@
+﻿@model IEnumerable<CVMSanpham.Models.Slider>
+
+
+@{
+    ViewBag.Title = "slide";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>SLIDE</h2>
+
+<p>
+    <div class="tooltip-top">
+        <h1><a href="@Url.Action("ThemmoiSlide", "Admin")"><i class="far fa-file-image"></i></a> </h1>
+
+    </div>
+</p>
+
+
+
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Danh sách Slide
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th style="text-align: center">Hình ảnh</th>
+                        <th>LinkURL</th>
+                        <th>Thứ tự</th>
+                        <th>Ẩn hiện</th>
+                        <th style="text-align: center">Titlle</th>
+                        <th>Tên hình</th>
+                        <th>Review</th>
+                        
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th style="text-align: center">Hình ảnh</th>
+                        <th>LinkURL</th>
+                        <th>Thứ tự</th>
+                        <th>Ẩn hiện</th>
+                        <th style="text-align: center">Titlle</th>
+                        <th>Tên hình</th>
+                        <th>Review</th>
+
+
+                    </tr>
+                </tfoot>
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="@Url.Content("~/images/"+ item.UrlHinh)" width="100" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LinkUrl)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Thutu)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AnHien)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tenhinh)
+                            </td>
+                            <td>
+                                @Html.Raw(item.review)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Suasanpham", "Admin",new { id=item.MaSlider })"><i class="fas fa-edit"></i></a>
+                                
+                                <a href="@Url.Action("Xoaslide", "Admin",new { id=item.MaSlider })"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+
+                        </tr>
+
+
+
+                    </tbody>
+                }
+
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>

@@ -141,15 +141,6 @@
       <Association Name="Hang_SanPham" Member="Hang" ThisKey="MaHang" OtherKey="MaHang" Type="Hang" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Slider" Member="Sliders">
-    <Type Name="Slider">
-      <Column Name="MaSlider" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="UrlHinh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="LinkUrl" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="Thutu" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AnHien" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.SoLuotTruyCap" Member="SoLuotTruyCaps">
     <Type Name="SoLuotTruyCap">
       <Column Name="Dem" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -174,6 +165,18 @@
       <Column Name="LuotXem" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayCapNhat" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="AnHien" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Slider" Member="Sliders">
+    <Type Name="Slider">
+      <Column Name="MaSlider" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrlHinh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LinkUrl" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Thutu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnHien" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tenhinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="review" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

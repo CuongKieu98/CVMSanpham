@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CVMSanpham.Models.ThongTin>
+
+@{
+    ViewBag.Title = "thongtin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>thongtin</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.code1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioiThieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sitemap)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.code1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioiThieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sitemap)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaTT }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaTT }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaTT })
+        </td>
+    </tr>
+}
+
+</table>

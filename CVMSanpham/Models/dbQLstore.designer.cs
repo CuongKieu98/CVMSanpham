@@ -60,15 +60,15 @@ namespace CVMSanpham.Models
     partial void InsertSanPham(SanPham instance);
     partial void UpdateSanPham(SanPham instance);
     partial void DeleteSanPham(SanPham instance);
-    partial void InsertSlider(Slider instance);
-    partial void UpdateSlider(Slider instance);
-    partial void DeleteSlider(Slider instance);
     partial void InsertThongTin(ThongTin instance);
     partial void UpdateThongTin(ThongTin instance);
     partial void DeleteThongTin(ThongTin instance);
     partial void InsertTinTuc(TinTuc instance);
     partial void UpdateTinTuc(TinTuc instance);
     partial void DeleteTinTuc(TinTuc instance);
+    partial void InsertSlider(Slider instance);
+    partial void UpdateSlider(Slider instance);
+    partial void DeleteSlider(Slider instance);
     #endregion
 		
 		public dbQLstoreDataContext() : 
@@ -181,14 +181,6 @@ namespace CVMSanpham.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<Slider> Sliders
-		{
-			get
-			{
-				return this.GetTable<Slider>();
-			}
-		}
-		
 		public System.Data.Linq.Table<SoLuotTruyCap> SoLuotTruyCaps
 		{
 			get
@@ -210,6 +202,14 @@ namespace CVMSanpham.Models
 			get
 			{
 				return this.GetTable<TinTuc>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Slider> Sliders
+		{
+			get
+			{
+				return this.GetTable<Slider>();
 			}
 		}
 	}
@@ -3165,164 +3165,6 @@ namespace CVMSanpham.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Slider")]
-	public partial class Slider : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MaSlider;
-		
-		private string _UrlHinh;
-		
-		private string _LinkUrl;
-		
-		private System.Nullable<int> _Thutu;
-		
-		private bool _AnHien;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaSliderChanging(int value);
-    partial void OnMaSliderChanged();
-    partial void OnUrlHinhChanging(string value);
-    partial void OnUrlHinhChanged();
-    partial void OnLinkUrlChanging(string value);
-    partial void OnLinkUrlChanged();
-    partial void OnThutuChanging(System.Nullable<int> value);
-    partial void OnThutuChanged();
-    partial void OnAnHienChanging(bool value);
-    partial void OnAnHienChanged();
-    #endregion
-		
-		public Slider()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSlider", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MaSlider
-		{
-			get
-			{
-				return this._MaSlider;
-			}
-			set
-			{
-				if ((this._MaSlider != value))
-				{
-					this.OnMaSliderChanging(value);
-					this.SendPropertyChanging();
-					this._MaSlider = value;
-					this.SendPropertyChanged("MaSlider");
-					this.OnMaSliderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UrlHinh", DbType="VarChar(100)")]
-		public string UrlHinh
-		{
-			get
-			{
-				return this._UrlHinh;
-			}
-			set
-			{
-				if ((this._UrlHinh != value))
-				{
-					this.OnUrlHinhChanging(value);
-					this.SendPropertyChanging();
-					this._UrlHinh = value;
-					this.SendPropertyChanged("UrlHinh");
-					this.OnUrlHinhChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LinkUrl", DbType="VarChar(100)")]
-		public string LinkUrl
-		{
-			get
-			{
-				return this._LinkUrl;
-			}
-			set
-			{
-				if ((this._LinkUrl != value))
-				{
-					this.OnLinkUrlChanging(value);
-					this.SendPropertyChanging();
-					this._LinkUrl = value;
-					this.SendPropertyChanged("LinkUrl");
-					this.OnLinkUrlChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thutu", DbType="Int")]
-		public System.Nullable<int> Thutu
-		{
-			get
-			{
-				return this._Thutu;
-			}
-			set
-			{
-				if ((this._Thutu != value))
-				{
-					this.OnThutuChanging(value);
-					this.SendPropertyChanging();
-					this._Thutu = value;
-					this.SendPropertyChanged("Thutu");
-					this.OnThutuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AnHien", DbType="Bit NOT NULL")]
-		public bool AnHien
-		{
-			get
-			{
-				return this._AnHien;
-			}
-			set
-			{
-				if ((this._AnHien != value))
-				{
-					this.OnAnHienChanging(value);
-					this.SendPropertyChanging();
-					this._AnHien = value;
-					this.SendPropertyChanged("AnHien");
-					this.OnAnHienChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SoLuotTruyCap")]
 	public partial class SoLuotTruyCap
 	{
@@ -3713,6 +3555,236 @@ namespace CVMSanpham.Models
 					this._AnHien = value;
 					this.SendPropertyChanged("AnHien");
 					this.OnAnHienChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Slider")]
+	public partial class Slider : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _MaSlider;
+		
+		private string _UrlHinh;
+		
+		private string _LinkUrl;
+		
+		private System.Nullable<int> _Thutu;
+		
+		private bool _AnHien;
+		
+		private string _Title;
+		
+		private string _Tenhinh;
+		
+		private string _review;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaSliderChanging(int value);
+    partial void OnMaSliderChanged();
+    partial void OnUrlHinhChanging(string value);
+    partial void OnUrlHinhChanged();
+    partial void OnLinkUrlChanging(string value);
+    partial void OnLinkUrlChanged();
+    partial void OnThutuChanging(System.Nullable<int> value);
+    partial void OnThutuChanged();
+    partial void OnAnHienChanging(bool value);
+    partial void OnAnHienChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnTenhinhChanging(string value);
+    partial void OnTenhinhChanged();
+    partial void OnreviewChanging(string value);
+    partial void OnreviewChanged();
+    #endregion
+		
+		public Slider()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSlider", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MaSlider
+		{
+			get
+			{
+				return this._MaSlider;
+			}
+			set
+			{
+				if ((this._MaSlider != value))
+				{
+					this.OnMaSliderChanging(value);
+					this.SendPropertyChanging();
+					this._MaSlider = value;
+					this.SendPropertyChanged("MaSlider");
+					this.OnMaSliderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UrlHinh", DbType="VarChar(100)")]
+		public string UrlHinh
+		{
+			get
+			{
+				return this._UrlHinh;
+			}
+			set
+			{
+				if ((this._UrlHinh != value))
+				{
+					this.OnUrlHinhChanging(value);
+					this.SendPropertyChanging();
+					this._UrlHinh = value;
+					this.SendPropertyChanged("UrlHinh");
+					this.OnUrlHinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LinkUrl", DbType="VarChar(100)")]
+		public string LinkUrl
+		{
+			get
+			{
+				return this._LinkUrl;
+			}
+			set
+			{
+				if ((this._LinkUrl != value))
+				{
+					this.OnLinkUrlChanging(value);
+					this.SendPropertyChanging();
+					this._LinkUrl = value;
+					this.SendPropertyChanged("LinkUrl");
+					this.OnLinkUrlChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thutu", DbType="Int")]
+		public System.Nullable<int> Thutu
+		{
+			get
+			{
+				return this._Thutu;
+			}
+			set
+			{
+				if ((this._Thutu != value))
+				{
+					this.OnThutuChanging(value);
+					this.SendPropertyChanging();
+					this._Thutu = value;
+					this.SendPropertyChanged("Thutu");
+					this.OnThutuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AnHien", DbType="Bit NOT NULL")]
+		public bool AnHien
+		{
+			get
+			{
+				return this._AnHien;
+			}
+			set
+			{
+				if ((this._AnHien != value))
+				{
+					this.OnAnHienChanging(value);
+					this.SendPropertyChanging();
+					this._AnHien = value;
+					this.SendPropertyChanged("AnHien");
+					this.OnAnHienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(50)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this.OnTitleChanging(value);
+					this.SendPropertyChanging();
+					this._Title = value;
+					this.SendPropertyChanged("Title");
+					this.OnTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tenhinh", DbType="NVarChar(50)")]
+		public string Tenhinh
+		{
+			get
+			{
+				return this._Tenhinh;
+			}
+			set
+			{
+				if ((this._Tenhinh != value))
+				{
+					this.OnTenhinhChanging(value);
+					this.SendPropertyChanging();
+					this._Tenhinh = value;
+					this.SendPropertyChanged("Tenhinh");
+					this.OnTenhinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_review", DbType="NVarChar(50)")]
+		public string review
+		{
+			get
+			{
+				return this._review;
+			}
+			set
+			{
+				if ((this._review != value))
+				{
+					this.OnreviewChanging(value);
+					this.SendPropertyChanging();
+					this._review = value;
+					this.SendPropertyChanged("review");
+					this.OnreviewChanged();
 				}
 			}
 		}

@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+   
+    <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Admin</title>
+    <title>Welcome to ...</title>
     <!-- Custom fonts for this template-->
     <link href="~/Content/cssadmin/all.min.css" rel="stylesheet" type="text/css">
     <!-- Page level plugin CSS-->
 
-    <link href="~/Content/cssadmin/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/Content/cssadmin/dataTables.bootstrap4.css" rel="stylesheet"/>
     <!-- Custom styles for this template-->
 
-    <link href="~/Content/cssadmin/sb-admin.css" rel="stylesheet" />
-    <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script>
-    <script src="~/Scripts/admin2.js"></script>
+    <link href="~/Content/cssadmin/sb-admin.css" rel="stylesheet"/>
+
 </head>
 <body id="page-top">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -119,6 +120,25 @@
                     <span>Tables</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="far fa-newspaper"></i>
+                    <span>Tin tức</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("slide", "Admin")">
+                    <i class="fab fa-glide"></i>
+                    <span>Slide</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                   
+                    <i class="fas fa-ad"></i>
+                    <span>Quảng cáo</span>
+                </a>
+            </li>
         </ul>
         <div id="content-wrapper">
             <div class="container-fluid">
@@ -181,7 +201,9 @@
 
     <script src="~/Content/cssadmin/sb-admin.min.js"></script>
     <!-- Demo scripts for this page-->
-
+    <script src="/Content/cssadmin/ckeditor/ckeditor.js"></script>
+   
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
     <script src="~/Content/cssadmin/datatables-demo.js"></script>
    
     <script src="~/Content/cssadmin/chart-area-demo.js"></script>
