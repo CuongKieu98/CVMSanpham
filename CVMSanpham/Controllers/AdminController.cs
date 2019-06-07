@@ -438,6 +438,11 @@ namespace CVMSanpham.Controllers
                 return RedirectToAction("Laptop");
             }
         }
+        
+        
+
+
+        //
         [HttpGet]
         public ActionResult ThemmoiSlide()
         {
@@ -513,6 +518,110 @@ namespace CVMSanpham.Controllers
             db.SubmitChanges();
             return RedirectToAction("slide");
         }
+        [HttpGet]
+        public ActionResult Suaslide(int id)
+        {
+            //Lay ra doi tuong sach theo ma
+            Slider slider = db.Sliders.SingleOrDefault(n => n.MaSlider == id);
+            ViewBag.MaSlider = slider.MaSlider;
+            if (slider == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            //Dua du lieu vao dropdownList
+            
+            
+          
+            return View(slider);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Suaslide(Slider slider, HttpPostedFileBase fileUpload)
+        {
+           //Dua du lieu vao dropdownload
+           
+            //Kiem tra duong dan file
+            if (fileUpload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn ảnh bìa";
+                return View();
+            }
+            //Them vao CSDL
+            else
+            {
+                if (ModelState.IsValid)
+                {
+
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    //Luu duong dan cua file
+                    var path = Path.Combine(Server.MapPath("~/img/slider/slider-2/"), fileName);
+
+                    fileUpload.SaveAs(path);
+
+                    Slider sl = db.Sliders.SingleOrDefault(n => n.MaSlider == slider.MaSlider);
+                    sl.Tenhinh = slider.Tenhinh;
+                    sl.LinkUrl = slider.LinkUrl;
+                    sl.UrlHinh = fileName;
+                    sl.Title = slider.Tenhinh;
+                    sl.review = slider.review;
+                    
+
+                    UpdateModel(slider );
+                    db.SubmitChanges();
+
+                }
+                return RedirectToAction("Laptop");
+            }
+        }
+        [HttpGet]
+        public ActionResult ThemmoiQuangcao()
+        {
+            
+
+            return View();
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult ThemmoiQuangcao(QuangCao quangCao, HttpPostedFileBase fileUpload)
+        {
+            //Dua du lieu vao dropdownload
+         
+            //Kiem tra duong dan file
+            if (fileUpload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn ảnh bìa";
+                return View();
+            }
+            //Them vao CSDL
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    //Luu ten fie, luu y bo sung thu vien using System.IO;
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    //Luu duong dan cua file
+                    var path = Path.Combine(Server.MapPath("~/img"), fileName);
+                    //Kiem tra hình anh ton tai chua?
+                    if (System.IO.File.Exists(path))
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                    else
+                    {
+                        //Luu hinh anh vao duong dan
+                        fileUpload.SaveAs(path);
+                    }
+
+                    quangCao.AnhQC = fileName;
+                    //Luu vao CSDL
+                    db.QuangCaos.InsertOnSubmit(quangCao);
+                    db.SubmitChanges();
+                }
+                return RedirectToAction("quangcao");
+            }
+        }
+
+
+
 
     }
 }

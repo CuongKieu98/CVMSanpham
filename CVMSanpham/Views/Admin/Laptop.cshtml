@@ -67,43 +67,62 @@ else
                 @foreach (var item in Model)
                 {
                     <tbody>
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.TenSP)
-                            </td>
-                            <td>
-                                <img src="@Url.Content("~/sanpham/"+ item.Anhbia)" width="100" />
-                            </td>
-                            <td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenSP)
+                        </td>
+                        <td>
+                            <img src="@Url.Content("~/sanpham/"+ item.Anhbia)" width="100" />
+                        </td>
+                        <td>
 
-                                <a style="color: red">@Html.DisplayFor(modelItem => item.GiaHienTai)</a>
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.GiaCu)
-                            </td>
-                            <td>
-                                @Truncate(item.MoTa, 100)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.NgayCapNhat)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CHUDE.TenChuDe)
-                            </td>
-                            <td>
-                                <img src="@Url.Content("~/images/"+ item.Hang.AnhHang)" />
-                            </td>
-                            <td>
-                                <a href="@Url.Action("Suasanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-edit"></i></a>
-                                <a href="@Url.Action("ChitietSanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-info-circle"></i></a>
-                                <a href="@Url.Action("Xoasanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-trash-alt"></i></a>
-                            </td>
+                            <a style="color: red">@Html.DisplayFor(modelItem => item.GiaHienTai)</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiaCu)
+                        </td>
+                        <td>
+                            @Truncate(item.MoTa, 100)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CHUDE.TenChuDe)
+                        </td>
+                        <td>
+                            <img src="@Url.Content("~/images/"+ item.Hang.AnhHang)" />
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Suasanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-edit"></i></a>
+                            <a href="@Url.Action("ChitietSanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-info-circle"></i></a>                           
+                            <a href="@Url.Action("Xoasanpham", "Admin",new { id=item.MaSP })"><i class="fas fa-trash-alt"></i></a>
+                        </td>
 
-                        </tr>
+                    </tr>
 
 
 
                     </tbody>
+                    <!-- delete san pham-->
+                    <div class="modal fade" id="deletesp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Bạn muốn xóa sản phẩm này</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Chọn xóa nếu bạn thực sự muốn xóa sản phẩm này</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Đéo</button>
+                                    <a class="btn btn-primary" href="@Url.Action("Xoasanpham", "Admin",new { id=item.MaSP })">Đoán xem</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- delete san pham-->
                 }
 
             </table>
@@ -112,3 +131,4 @@ else
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
 
+<!--jhaskj-->

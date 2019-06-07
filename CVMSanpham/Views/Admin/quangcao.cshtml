@@ -8,30 +8,32 @@
 <h2>quangcao</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <div class="tooltip-top">
+        <h1><a href="@Url.Action("ThemmoiQuangcao", "Admin")"><i class="fas fa-audio-description"></i></a> </h1>
+
+    </div>
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TenQC)
+            Tên quảng cáo
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TenCty)
+            Tên Công Ty QC
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AnhQC)
+            Hình ảnh
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LinkUrl)
+           Link URL
         </th>
         <th>
             @Html.DisplayNameFor(model => model.vitri)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ngaybatdau)
-        </th>
+            Ngày bắt đầu
         <th>
-            @Html.DisplayNameFor(model => model.Ngayhethan)
+            Ngày hết hạn
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AnHien)
@@ -48,7 +50,7 @@
             @Html.DisplayFor(modelItem => item.TenCty)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AnhQC)
+            <img src="@Url.Content("~/img/"+ item.AnhQC)" width="100" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.LinkUrl)
@@ -66,8 +68,8 @@
             @Html.DisplayFor(modelItem => item.AnHien)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaQC }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaQC }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaQC }) 
+          
             @Html.ActionLink("Delete", "Delete", new { id=item.MaQC })
         </td>
     </tr>

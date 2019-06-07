@@ -57,6 +57,7 @@
     <link href="~/Content/style-customizer.css" rel="stylesheet" />
     <link href="#" data-style="styles" rel="stylesheet">
     <!-- Modernizr JS -->
+    <link href="~/Content/thongbao/login.css" rel="stylesheet" />
 
     <script src="~/Content/modernizr-2.8.3.min.js"></script>
 </head>
@@ -86,19 +87,11 @@
         <ul class="main-menu text-center">
             <li>
                 <a href="@Url.Action("Index","Laptopstore")">Home</a>
-                <ul class="dropdwn">
-                    <li>
-                        <a href="index.html">Home Version 1</a>
-                    </li>
-                    <li>
-                        <a href="index-2.html">Home Version 2</a>
-                    </li>
-
-                </ul>
+               
             </li>
             
             <li class="mega-parent">
-                <a href="shop.html">Products</a>
+                <a href="@Url.Action("Index","Laptopstore")">SHOP</a>
                 <div class="mega-menu-area clearfix">
                     <div class="mega-menu-link f-left">
                         <ul class="single-mega-item">
@@ -111,23 +104,11 @@
                             <li class="menu-title">Thương hiệu</li>
                             @Html.Action("Hang", "Laptopstore")
                         </ul>
-                        <ul class="single-mega-item">
-                            <li class="menu-title">Tablets</li>
-                            <li>
-                                <a href="">All Tablets</a>
-                            </li>
-
-
-
-
-                            <li>
-                                <a href="">Cases & Covers</a>
-                            </li>
-                        </ul>
+                        
                     </div>
                     <div class="mega-menu-photo f-left">
-                        <a href="#">
-                            <img src="~/images/34/1.jpg" alt="mega menu image">
+                        <a href="#"> 
+                            <img src="~/img/380x215(2)-380x215.gif" />
                         </a>
                     </div>
                 </div>
@@ -342,28 +323,24 @@
                                 </a>
                             </div>
                             <div class="up-comming-pro-info f-left">
-                                <h3><a href="#">Sự kiện hot mỗi tháng</a></h3>
+                                <h3><a style="color: red" href="#">Sự kiện hot mỗi tháng</a></h3>
                                 <p>Hãy tham gia mua sắm vào những đợt khuyến mãi hàng tháng của cửa hàng trong thời gian sự kiện</p>
                                 <div class="up-comming-time">
-                                    <div data-countdown="2019/06/15"></div>
+                                    <div data-countdown="2019/06/20"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 hidden-sm col-xs-12">
                         <div class="banner-item banner-1">
-                            <div class="ribbon-price">
-                                <span>$ 896.00</span>
-                            </div>
+                           
                             <div class="banner-img">
                                 <a href="#">
-
-                                    <img src="~/img/59615300_6137001088645_967850698102276096_n.png.jpg" />
+                                    <img src="~/images/62027729_6140375154645_5417356904596766720_n.png.jpg" />
+                                    
                                 </a>
                             </div>
-                            <div class="banner-info">
-                                <h3><a href="#">Product Name</a></h3>                            
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -379,9 +356,10 @@
 <div class="row">
     <div class="col-md-12">
         <div class="section-title text-left mb-40">
-            <h2 class="uppercase">Sản phẩm mới ra mắt</h2>
+            <marquee behavior="alternate" style="color: aqua"><h2 style="color: RED">NEW LAPTOP</h2></marquee>
             
         </div>
+        
     </div>
 </div>
 <div class="featured-product">
@@ -389,7 +367,7 @@
         @RenderBody()
     </div>
         
-     
+
       
       
     </div>
@@ -412,10 +390,11 @@
         <div class="pro-tab-menu text-right">
             <!-- Nav tabs -->
             <ul class="">
-                <li class="active"><a href="#popular-product" data-toggle="tab">Nổi bật</a></li>
-              
-                <li><a href="#best-seller" data-toggle="tab">Xem tất cả</a></li>
                 
+                <li class="active" style="color: red"><a href="#popular-product" data-toggle="tab">Nổi bật</a></li>
+
+                <li><a href="#best-seller" data-toggle="tab">Xem tất cả</a></li>
+               
             </ul>
         </div>
     </div>
@@ -443,8 +422,6 @@
 </div>
 </div>
 </div>
-<div id="quickview-wrapper">
-<!-- Modal -->
     <div id="quickview-wrapper">
         <!-- Modal -->
         <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
@@ -457,33 +434,23 @@
                         <div class="modal-product clearfix">
                             <div class="product-images">
                                 <div class="main-image images">
-                                    <img alt="" src="img/product/quickview.jpg">
+
                                 </div>
                             </div><!-- .product-images -->
 
                             <div class="product-info">
-                                <h1>Aenean eu tristique</h1>
+                                <h1>Tên sản phẩm :</h1>
                                 <div class="price-box-3">
-                                    <div class="s-price-box">
-                                        <span class="new-price">£160.00</span>
-                                        <span class="old-price">£190.00</span>
-                                    </div>
+
                                 </div>
-                                <a href="single-product-left-sidebar.html" class="see-all">See all features</a>
+
                                 <div class="quick-add-to-cart">
-                                    <form method="post" class="cart">
-                                        <div class="numbers-row">
-                                            <input type="number" id="french-hens" value="3">
-                                        </div>
-                                        <button class="single_add_to_cart_button" type="submit">Add to cart</button>
-                                    </form>
+                                    <form method="post" class="cart"></form>
                                 </div>
-                                <div class="quick-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero.
-                                </div>
+
                                 <div class="social-sharing">
                                     <div class="widget widget_socialsharing_widget">
-                                        <h3 class="widget-title-modal">Share this product</h3>
+                                        <h3 class="widget-title-modal">Chia sẻ sản phẩm</h3>
                                         <ul class="social-icons clearfix">
                                             <li>
                                                 <a class="facebook" href="#" target="_blank" title="Facebook">
@@ -521,6 +488,7 @@
         </div>
         <!-- END Modal -->
     </div>
+
 <!-- BLOG SECTION START -->
     <div class="blog-section mb-50">
         <div class="container">
@@ -802,6 +770,6 @@
 <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="~/Scripts/map.js"></script>
     <script src="~/Scripts/main.js"></script>
-
+    <script src="~/Content/thongbao/lla.js"></script>
 </body>
 </html>

@@ -77,6 +77,15 @@ namespace CVMSanpham.Controllers
             return View(Sanpham.Single());
 
         }
+
+        public ActionResult quangcao(int id)
+        {
+            var quangcao = from qc in data.QuangCaos
+                where qc.MaQC== id
+                           select qc;
+
+            return PartialView(quangcao);
+        }
         
     }
 }

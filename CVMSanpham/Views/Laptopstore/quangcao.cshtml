@@ -1,0 +1,21 @@
+﻿@using CVMSanpham.Models
+@model IEnumerable<CVMSanpham.Models.QuangCao>
+@foreach (var quangcao in Model)
+{
+    <div class="col-md-4 hidden-sm col-xs-12">
+        <div class="banner-item banner-1">
+            <div class="ribbon-price">
+                <span></span>
+            </div>
+            <div class="banner-img">
+                <a href="@quangcao.LinkUrl">
+                    <img src="~/images/@quangcao.AnhQC" width="300" />
+                                    
+                </a>
+            </div>
+            <div class="banner-info">
+                <h3><a href="@quangcao.LinkUrl"></a></h3>                            
+            </div>
+        </div>
+    </div>
+}

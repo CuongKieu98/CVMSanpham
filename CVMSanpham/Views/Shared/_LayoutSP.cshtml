@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Begin SEO -->
     <!-- Primary Meta Tags -->
-    <title>Website bán Laptop lớn nhất VN</title>
+    <title>Sản phẩm-Laptop- Phụ kiện giá rẻ</title>
     <meta name="title" content="Template Bán Điện Thoại Và Phụ Kiện EC06 | KhoTemplateVN">
     <meta name="description" content="Template bán điện thoại và phụ kiện ec06 cung cấp đầy đủ mọi chức năng cho người dùng giúp việc quảng cáo thương hiệu, quảng cáo sản phẩm dễ dàng, chuẩn seo và responsive.">
     <!-- Open Graph / Facebook -->
@@ -343,10 +343,10 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="breadcrumbs-inner">
-                            <h1 class="breadcrumbs-title">Single Product</h1>
+                            <h1 class="breadcrumbs-title">CHI TIẾT SẢN PHẨM</h1>
                             <ul class="breadcrumb-list">
-                                <li><a href="index.html">Home</a></li>
-                                <li>Single Product</li>
+                                <li><a href="@Url.Action("Index","Laptopstore")">Home</a></li>
+                                <li>CHI TIẾT SẢN PHẨM</li>
                             </ul>
                         </div>
                     </div>
@@ -368,24 +368,7 @@
                                 @RenderBody()
                             </div>
                             <!-- single-product-area end -->
-                            <div class="related-product-area">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="section-title text-left mb-40">
-                                            <h2 class="uppercase">related product</h2>
-                                            <h6>There are many variations of passages of brands available,</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="active-related-product">
-                                 
-                                
-                                      
-                                
-                                    </div>
-                                </div>
-                            </div>
+                          
                         </div>
                         <div class="col-md-3 col-xs-12">
                             <!-- widget-search -->
@@ -397,77 +380,24 @@
                             </aside>
                             <!-- widget-categories -->
                             <aside class="widget widget-categories box-shadow mb-30">
-                                <h6 class="widget-title border-left mb-20">Categories</h6>
+                                <h6 class="widget-title border-left mb-20">Laptop:</h6>
                                 <div id="cat-treeview" class="product-cat">
                                     <ul>
-                                        <li class="closed">
-                                            <a href="#">Brand One</a>
-                                            <ul>
-                                                <li><a href="#">Mobile</a></li>
-                                                <li><a href="#">Tab</a></li>
-                                                <li><a href="#">Watch</a></li>
-                                                <li><a href="#">Head Phone</a></li>
-                                                <li><a href="#">Memory</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="open">
-                                            <a href="#">Brand Two</a>
-                                            <ul>
-                                                <li><a href="#">Mobile</a></li>
-                                                <li><a href="#">Tab</a></li>
-                                                <li><a href="#">Watch</a></li>
-                                                <li><a href="#">Head Phone</a></li>
-                                                <li><a href="#">Memory</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="closed">
-                                            <a href="#">Accessories</a>
-                                            <ul>
-                                                <li><a href="#">Footwear</a></li>
-                                                <li><a href="#">Sunglasses</a></li>
-                                                <li><a href="#">Watches</a></li>
-                                                <li><a href="#">Utilities</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="closed">
-                                            <a href="#">Top Brands</a>
-                                            <ul>
-                                                <li><a href="#">Mobile</a></li>
-                                                <li><a href="#">Tab</a></li>
-                                                <li><a href="#">Watch</a></li>
-                                                <li><a href="#">Head Phone</a></li>
-                                                <li><a href="#">Memory</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="closed">
-                                            <a href="#">Jewelry</a>
-                                            <ul>
-                                                <li><a href="#">Footwear</a></li>
-                                                <li><a href="#">Sunglasses</a></li>
-                                                <li><a href="#">Watches</a></li>
-                                                <li><a href="#">Utilities</a></li>
-                                            </ul>
-                                        </li>
+                                        @Html.Action("chude","Laptopstore")
                                     </ul>
                                 </div>
                             </aside>
                             <!-- operating-system -->
                             <aside class="widget operating-system box-shadow mb-30">
-                                <h6 class="widget-title border-left mb-20">operating system</h6>
+                                <h6 class="widget-title border-left mb-20">Hãng nổi bật</h6>
                                 <form action="action_page.php">
-                                    <label><input type="checkbox" name="operating-1" value="phone-1">Asus</label><br>
-                                    <label><input type="checkbox" name="operating-1" value="phone-1">Acer</label><br>
-                                    <label><input type="checkbox" name="operating-1" value="phone-1">Dell</label><br>
-                                    <label><input type="checkbox" name="operating-1" value="phone-1">Lenovo</label><br>
-                                    <label><input type="checkbox" name="operating-1" value="phone-1">Apple</label><br>
-                                    <label><input type="checkbox" name="operating-1" value="phone-1">HP</label><br>
-                                    <label class="mb-0"><input type="checkbox" name="operating-1" value="phone-1">MSI</label><br>
+                                    @Html.Action("Hang","Laptopstore")
                                 </form>
                             </aside>
                             <!-- widget-product -->
                             <aside class="widget widget-product box-shadow">
                                 <h6 class="widget-title border-left mb-20">recent products</h6>
-                              
+                                @Html.Action("quangcao","Laptopstore")
                                 
                                 
                             </aside>
