@@ -563,7 +563,7 @@ namespace CVMSanpham.Controllers
                     sl.Tenhinh = slider.Tenhinh;
                     sl.LinkUrl = slider.LinkUrl;
                     sl.UrlHinh = fileName;
-                    sl.Title = slider.Tenhinh;
+                    sl.Title = slider.Title;
                     sl.review = slider.review;
                     
 

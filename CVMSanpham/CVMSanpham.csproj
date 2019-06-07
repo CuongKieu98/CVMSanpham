@@ -643,10 +643,15 @@
     <Content Include="img\slider\slider-2\4QksTX.jpg" />
     <Content Include="img\slider\slider-2\4QnOPR.jpg" />
     <Content Include="img\slider\slider-2\4QnVk0.jpg" />
+    <Content Include="img\slider\slider-2\abc.png" />
+    <Content Include="img\slider\slider-2\acd.png" />
+    <Content Include="img\slider\slider-2\as.png" />
+    <Content Include="img\slider\slider-2\asdas.png" />
     <Content Include="img\slider\slider-2\layer-1.png" />
     <Content Include="img\slider\slider-2\layer-2.png" />
     <Content Include="img\slider\slider-2\pv-banner-897x341-5be46.jpg" />
     <Content Include="img\slider\slider-2\pv-banner-897x341-e1b3a.png" />
+    <Content Include="img\slider\slider-2\sad.png" />
     <Content Include="img\slider\slider-2\slider-1.jpg" />
     <Content Include="obj\Debug\CVMSanpham.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\CVMSanpham.dll" />
